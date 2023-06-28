@@ -1,0 +1,86 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem;
+}
+
+.container >*{
+  min-width: 25rem;
+  max-width: 40rem;
+}
+img{
+  flex: 1 0;
+  object-fit: cover;
+  height: 35rem;
+  margin: 1rem;
+  border-radius: 3rem;
+}
+.details{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  flex: 1 0;
+  border: 2rem;
+  padding: 2rem;
+  color: black;
+  margin-left: 1rem;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.favorite{
+  color: #e72929;
+  font-size: 2.5rem;
+}
+.name{
+  font-weight: bold;
+  font-size: 2rem;
+}
+.favorite.not{
+  color: gray;
+}
+.origins{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+.origins span{
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 2rem;
+  background-color: aliceblue;
+}
+.cook-time{
+  margin-top: 1rem;
+}
+.cook-time span{
+  padding: 0.6rem 2rem 0.6rem 0;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+}
+.price{
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: green;
+}
+.price::before{
+  content:"Price: ";
+  color: #e72929;
+}
+button{
+  background-color: #e72929;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  outline: none;
+}
+button:hover{
+  opacity: 0.9;
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap');
+$primary-color: #e72929;
+$bg-color: #eb6c6c;
+  *{
+    box-sizing: border-box;
+  }
+  html{
+    font-size: 16px;
+  }
+  html,button{
+    font-family: "Quicksand" , "sand-serif";
+  }
+body{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+

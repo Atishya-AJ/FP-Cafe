@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Login"></app-title>
+    <img src="../../../../assets/Logo1.jpg" alt="FP-Cafe">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+
+      <div class="input-container">
+        <label>Email</label>
+        <input type="email" formControlName="email" [class.error]="fc.email.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.email.invalid && isSubmitted">
+          <div *ngIf="fc.email.errors?.required">Field is required!</div>
+          <div *ngIf="fc.email.errors?.email">Invalid email!</div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label>Password</label>
+        <input type="password" formControlName="password" [class.error]="fc.password.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.password.invalid && isSubmitted">
+          <div *ngIf="fc.password.errors?.required">Field is required!</div>
+        </div>
+      </div>
+
+      <button type="submit" class="default-button">Login</button>
+
+      <div class="register">
+        New user? &nbsp;
+        <a routerLink="/register" [queryParams]="{ returnUrl: returnUrl }">Register here</a>
+      </div>
+
+    </form>
+  </div>
+</div>

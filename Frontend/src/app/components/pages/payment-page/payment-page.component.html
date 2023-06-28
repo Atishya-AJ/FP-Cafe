@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="content">
+    <div class="heading">
+      <h2>Payment Form</h2>
+      <form [formGroup]="paymentForm">
+        <div class="input-container">
+          <label for="cardNumber">Card Number</label>
+          <input type="text" id="cardNumber" formControlName="cardNumber">
+        </div>
+        <div class="input-container">
+          <label for="expiryDate">Expiry Date</label>
+          <input type="text" id="expiryDate" formControlName="expiryDate">
+        </div>
+        <div class="input-container">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" formControlName="cvv">
+        </div>
+        <div class="input-container">
+          <label for="cardHolderName">Card Holder Name</label>
+          <input type="text" id="cardHolderName" formControlName="cardHolderName">
+        </div>
+      </form>
+    </div>
+    <div class="button-container">
+      <button type="button" (click)="submitPayment()">Submit Payment</button>
+      <button type="button" (click)="submitCOD()">Cash on Delivery</button>
+    </div>
+  </div>
+</div>

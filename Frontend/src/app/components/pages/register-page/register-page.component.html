@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="details">
+    <app-title title="Register"></app-title>
+    <form [formGroup]="registerForm" (ngSubmit)="submit()">
+      <div class="input-container">
+        <label>Name</label>
+        <input placeholder="Name" type="text" formControlName="name" [class.error]="fc.name.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.name.invalid && isSubmitted">
+          <div *ngIf="fc.name.errors?.required">Field is required!</div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label>Email</label>
+        <input placeholder="Email ID" type="email" formControlName="email" [class.error]="fc.email.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.email.invalid && isSubmitted">
+          <div *ngIf="fc.email.errors?.required">Field is required!</div>
+          <div *ngIf="fc.email.errors?.email">Invalid email!</div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label>Password</label>
+        <input placeholder="Password" type="password" formControlName="password" [class.error]="fc.password.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.password.invalid && isSubmitted">
+          <div *ngIf="fc.password.errors?.required">Field is required!</div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label>Confirm Password</label>
+        <input placeholder="Confirm Password" type="password" formControlName="confirmPassword" [class.error]="fc.confirmPassword.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.confirmPassword.invalid && isSubmitted">
+          <div *ngIf="fc.confirmPassword.errors?.required">Field is required!</div>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <label>Address</label>
+        <input placeholder="Address" type="text" formControlName="address" [class.error]="fc.address.invalid && isSubmitted">
+        <div class="error-list" *ngIf="fc.address.invalid && isSubmitted">
+          <div *ngIf="fc.address.errors?.required">Field is required!</div>
+        </div>
+      </div>
+
+
+      <div  class="button">
+        <button type="submit" class="default-button">Register</button>
+      </div>
+
+
+      <div class="login">
+        Already a user? &nbsp;
+        <a routerLink="/login" [queryParams]="{returnUrl: returnUrl}">
+          Login Here
+        </a>
+      </div>
+
+    </form>
+  </div>
+</div>

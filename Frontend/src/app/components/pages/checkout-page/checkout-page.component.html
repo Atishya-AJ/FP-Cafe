@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="content">
+    <div class="heading">
+      <app-title title="Order Form" fontSize="1.6rem"></app-title>
+      <form [formGroup]="checkoutForm">
+        <div class="input-container">
+          <label for="name">Name</label>
+          <input type="text" id="name" formControlName="name">
+        </div>
+        <div class="input-container">
+          <label for="address">Address</label>
+          <input type="text" id="address" formControlName="address">
+        </div>
+      </form>
+      <order-items-list [order]="order"></order-items-list>
+    </div>
+
+    <div class="button-container">
+      <div class="buttons">
+        <button type="button" (click)="createOrder()">
+          <a routerLink="/payment">Go To Payment</a>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</div>

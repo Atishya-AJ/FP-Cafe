@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import '../.../../../../../styles.scss';
+
+$secondary-color: #FFFFFF;
+$dark-gray: #2B2B2B;
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $bg-color;
+}
+
+.details {
+  background-image: url(../../../../assets/food-4.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+  padding: 50px;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+
+  app-title {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      label {
+        margin-bottom: 5px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      input {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 16px;
+
+        &:focus {
+          outline: none;
+          border-color: #000;
+        }
+      }
+
+      .error-list {
+        margin-top: 5px;
+        color: red;
+        font-size: 14px;
+
+        div {
+          margin-bottom: 5px;
+        }
+      }
+    }
+
+    .button {
+      margin-top: 20px;
+
+      button {
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: $secondary-color;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .login {
+    margin-top: 20px;
+    font-size: 14px;
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
